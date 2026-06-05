@@ -9,6 +9,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SectionTitle(text: String) {
-    Text(text, style = MaterialTheme.typography.titleMedium,
+    Text(
+        text = text,
+        style = MaterialTheme.typography.titleMedium,
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
 }

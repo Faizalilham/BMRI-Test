@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
+import dev.faizal.bmritest.ui.component.ErrorRetry
 import dev.faizal.bmritest.ui.component.PrimaryInfo
 import dev.faizal.bmritest.ui.component.ReviewItem
 import dev.faizal.bmritest.ui.component.SectionTitle
@@ -57,7 +58,7 @@ fun MovieDetailScreen(
                 }
             uiState.error != null && uiState.detail == null ->
                 Box(Modifier.fillMaxSize().padding(padding), Alignment.Center) {
-                    Text(uiState.error!!)
+                    ErrorRetry(message = uiState.error!!, onRetry = viewModel::retry)
                 }
             else -> LazyColumn(
                 state = listState,

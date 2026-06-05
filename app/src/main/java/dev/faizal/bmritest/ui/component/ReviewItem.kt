@@ -24,9 +24,13 @@ fun ReviewItem(review: Review) {
             .padding(horizontal = 16.dp, vertical = 4.dp)
     ) {
         Column(
-            modifier = Modifier.background(color = MaterialTheme.colorScheme.surface).padding(12.dp)
+            modifier = Modifier
+                .background(color = MaterialTheme.colorScheme.surface)
+                .padding(12.dp)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 Text(review.author, style = MaterialTheme.typography.titleSmall)
                 review.rating?.let {
                     Spacer(Modifier.width(8.dp))

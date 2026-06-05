@@ -57,8 +57,11 @@ fun TrailerRow(trailers: List<Video>) {
                         modifier = Modifier.size(48.dp)
                     )
                 }
-                Text(trailer.name, style = MaterialTheme.typography.labelMedium,
-                    maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(
+                    trailer.name,
+                    style = MaterialTheme.typography.labelMedium,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis)
             }
         }
     }

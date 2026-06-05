@@ -12,8 +12,13 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun ErrorRetry(message: String, onRetry: () -> Unit) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+fun ErrorRetry(
+    message: String,
+    onRetry: () -> Unit
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(message)
         Spacer(Modifier.height(8.dp))
         Button(onClick = onRetry) { Text("Coba lagi") }
