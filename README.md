@@ -7,7 +7,7 @@ Dibikin pakai Jetpack Compose.
 
 - Kotlin + Jetpack Compose
 - MVVM + Clean Architecture (dipisah jadi module `app` sama `core`)
-- Hilt buat dependency injection
+- Hilt
 - Retrofit + OkHttp 
 - Coroutines + Flow + StateFlow
 - Coil 
@@ -20,13 +20,12 @@ app/                  -> tampilan (Compose), ViewModel, navigasi
 core/
  ├─ data/
  │   ├─ remote/        -> DTO + service Retrofit
- │   ├─ mapper/        -> ubah DTO jadi model
  │   └─ repository/    -> implementasi repository
  ├─ domain/
  │   ├─ model/         -> model bersih buat dipakai UI
  │   └─ repository/    -> interface repository
  ├─ di/                -> modul Hilt (network & repository)
- └─ utils/             -> Resource, helper, dll
+ └─ utils/             -> Resource, Mapper Data, dll
 ```
 
 ## Cara jalanin
