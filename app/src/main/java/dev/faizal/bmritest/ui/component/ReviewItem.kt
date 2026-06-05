@@ -25,6 +25,7 @@ fun ReviewItem(review: Review) {
     ) {
         Column(
             modifier = Modifier
+                .fillMaxWidth()
                 .background(color = MaterialTheme.colorScheme.surface)
                 .padding(12.dp)
         ) {
